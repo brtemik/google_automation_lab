@@ -19,6 +19,10 @@ Write a Python script named **_run.py_** to process the text files (001.txt, 003
 
 The script should turn the data into a JSON dictionary by adding all the required fields, including the image associated with the fruit (image_name), and uploading it to _http://[linux-instance-external-IP]/fruits_ using the Python requests library.
 
+_**My screenshots below**_
+
+![Image of Uploaded fruits](https://github.com/brtemik/google_automation_lab/blob/main/uploaded_fruits.JPG)
+
 ### Generate a PDF report and send it through email
 Once the _images_ and _descriptions_ have been uploaded to the fruit store web-server, you will have to generate a PDF file to send to the supplier, indicating that the data was correctly processed. To generate PDF reports, you can use the _ReportLab_ library. The content of the report should look like this:
 
@@ -51,6 +55,11 @@ Now, check the webmail by visiting _[linux-instance-external-IP]/webmail_. Here,
 
 Now you should be able to see your inbox, with one unread email. Open the mail by double clicking on it. There should be a report in PDF format attached to the mail. View the report by opening it.
 
+_**My screenshots below**_
+
+![Image of recieved report](https://github.com/brtemik/google_automation_lab/blob/main/report_email.JPG)
+![Image of created report](https://github.com/brtemik/google_automation_lab/blob/main/opened_report.JPG)
+
 ### Health check
 This is the last part of the lab, where you will have to write a Python script named **_health_check.py_** that will run in the background monitoring some of your system statistics: CPU usage, disk space, available memory and name resolution. Moreover, this Python script should send an email if there are problems, such as:
 *	Report an error if CPU usage is over 80%
@@ -62,3 +71,7 @@ Complete the script to check the system statistics every 60 seconds, and in even
 To test out your script, you can install the _stress_ tool.
 
 Use crontab to launch it every minute in background.
+
+_**My screenshots below**_
+
+![Image of alerts](https://github.com/brtemik/google_automation_lab/blob/main/alerting.JPG)
